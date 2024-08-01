@@ -1,0 +1,119 @@
+*{
+    border: 0;
+    outline: 0;
+    padding:0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: url(mountain.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'NewFont';
+
+}
+@font-face {
+    font-family: 'NewFont';
+    src: url(Meditative.ttf);
+}
+
+.container{
+    width: 340px;
+    height: 400px;
+    padding: 30px;
+    background:transparent;
+    border:3px solid #e6b7eca1;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+}
+.container h1{
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'NewFont';
+}
+.todo-input{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.todo-input input{
+    min-width: 200px;
+    flex: 0.8;
+    outline: none;
+    padding: 10px 0px 10px 20px;
+    background: transparent;
+    border: 2px solid #e6b7eca1;
+    border-radius: 30px;
+    color: #efebeb;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.todo-input input::placeholder{
+    color: white;
+    font-weight: 100;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.todo-input button{
+    border: none;
+    outline: none;
+    background:white 0.5;
+    color:#e6b7eca1;
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    border: 2px solid #e6b7eca1;
+    padding: 1px;
+}
+.todo-input h1{
+    color: #e6b7eca1;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 5px 5px 5px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: #2c0232e3;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px;
+    font-family: 'NewFont';
+
+}
+ul li::before{
+    content: '';
+    height: 25px;
+    width: 25px;
+    background-image: url(bx-circle.svg);
+    position: absolute;
+    left: 0px;
+    top: 15px;
+    z-index: 1;
+  
+}
+li.checked{
+    color: #c6c6c6c4;
+    text-decoration: line-through;
+}
+li.checked::before{
+    content: '';
+    background-image: url(checked.svg);
+}
+span{
+    position: relative;
+    left: 200px;
+    top: 4px;
+    font-size: 30px;
+    color: black;
+}
